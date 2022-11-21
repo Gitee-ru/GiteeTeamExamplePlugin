@@ -1,0 +1,50 @@
+app:
+  name: GiteeExamplePlugin
+modules:
+  adminPage:
+    - key: examplePlugin-adminPage-1
+      resource: main
+      title: examplePluginAdminPage
+      loadType: Micro
+  itemPanel:
+    - key: examplePlugin-itemPanel-1
+      resource: main
+      title: examplePluginTicketPanel
+      loadType: Micro
+#      route: /demo1
+  itemActivity:
+    - key: examplePlugin-itemActivity-1
+      resource: main
+      title: examplePluginTicketTab
+      loadType: Micro
+#      route: /demo2
+  appPage:
+    - key: examplePlugin-appPage-1
+      resource: main
+      title: exampleTopMenu
+      loadType: Micro
+#      route: /demo4
+  workspacePage:
+    - key: examplePlugin-workspacePage-1
+      resource: main
+      title: examplePluginWorspacePage
+      loadType: Micro
+#      route: /demo5
+  itemAction:
+    - key: examplePlugin-action-1
+      route: /item-action
+      title: examplePluginTicketButton
+      resource: main
+      loadType: Micro  
+  viewAction:
+    - key: examplePlugin-milepost-1
+      resource: main
+      title: examplePluginViewButton
+      loadType: micro
+      route: /main
+      viewType:
+        - gantt
+
+resources:
+  - key: main
+    path: ./dist/
