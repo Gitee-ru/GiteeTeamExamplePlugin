@@ -1,12 +1,14 @@
-# OSUI webpack config demo
-### 首次开发
-将 `{{projectName}}` 修改为所需。
-### 开发
+# Example plugin
+
+Testing plugins system and manifest
+
+For loal start project
+
 `yarn dev`
 
-### 构建
+For loacl build project
 `yarn build`
 
-### 插件打包
+Build zip file for add plugin to Gitee
 `yarn build-app`
 
