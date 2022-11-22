@@ -6,44 +6,60 @@ modules:
       resource: main
       title: examplePluginAdminPage
       loadType: Micro
+      route: /adminPage
   itemPanel:
     - key: examplePlugin-itemPanel-1
       resource: main
       title: examplePluginTicketPanel
       loadType: Micro
-#      route: /demo1
+      route: /itemPanel
   itemActivity:
     - key: examplePlugin-itemActivity-1
       resource: main
       title: examplePluginTicketTab
       loadType: Micro
-#      route: /demo2
+      route: /itemActivity
   appPage:
     - key: examplePlugin-appPage-1
       resource: main
       title: exampleTopMenu
       loadType: Micro
-#      route: /demo4
+      route: /appPage
   workspacePage:
     - key: examplePlugin-workspacePage-1
       resource: main
       title: examplePluginWorspacePage
       loadType: Micro
-#      route: /demo5
+      route: /workspacePage
   itemAction:
     - key: examplePlugin-action-1
-      route: /item-action
-      title: examplePluginTicketButton
       resource: main
-      loadType: Micro  
+      title: examplePluginTicketButton
+      loadType: Micro
+      route: /itemAction
   viewAction:
     - key: examplePlugin-milepost-1
       resource: main
       title: examplePluginViewButton
       loadType: micro
-      route: /main
+      route: /viewAction
       viewType:
         - gantt
+  chart:
+    - key: examplePlugin-chart-1
+      resource: main
+      route: /chart
+      name: examplePluginChart
+      description: example chart
+      loadType: RemoteJs
+      tabOrder: 1
+      grid:
+        w: 4
+        h: 3
+        minW: 1
+        maxW: 12
+        minH: 1
+      icon: data:image/png;base64,iVBOR
 
 resources:
   - key: main
