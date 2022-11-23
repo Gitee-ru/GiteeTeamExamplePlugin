@@ -1,6 +1,5 @@
 import React from 'react';
 import { IT1Logo } from '@/components/IT1Logo';
-import { StubText } from '../StubText';
 import cx from './StubContent.less';
 
 export interface StubContentProps {
@@ -11,7 +10,11 @@ export function StubContent(props: StubContentProps): React.ReactElement {
   return (
     <div className={[cx('StubContent', props.className)].filter(Boolean).join(' ')}>
       <IT1Logo />
-      <StubText />
+      <div>
+        This is example panel to show ability to extend UI by additional plugins. If this
+        panel/button is not desired in the current workspace, please ask you administration to
+        disable ExamplePlugin from workspace or globally.
+      </div>
     </div>
   );
 }
