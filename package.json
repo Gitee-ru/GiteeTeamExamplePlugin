@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development",
     "dev": "yarn start",
     "start": "webpack server --mode=development",
     "build-app": "sh ./build-app.sh",

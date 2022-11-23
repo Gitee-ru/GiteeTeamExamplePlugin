@@ -7,7 +7,7 @@ const rootElement = 'ExamplePlugin';
 
 message.config({
   getContainer: () =>
-    document.getElementById('osc-proxima') || document.getElementById(rootElement),
+    /*document.getElementById('osc-proxima') || */ document.getElementById(rootElement),
 });
 
 import routes from './routes';
