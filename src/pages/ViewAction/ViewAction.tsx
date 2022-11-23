@@ -7,7 +7,7 @@ import cx from './ViewAction.less';
 
 export function ViewAction(): ReactElement {
   const handleClick = useCallback(() => {
-    message.info({ content: <StubContent /> });
+    message.info({ content: <StubContent />, duration: 0 });
   }, []);
 
   return (
