@@ -4,7 +4,7 @@ import { Layout } from 'antd';
 import Menu from '@osui/menu';
 import Space from '@osui/space';
 import { useSDK } from '@projectproxima/plugin-sdk';
-import { Logo } from '@/components/Logo';
+import { IT1Logo } from '@/components/IT1Logo';
 import { StubText } from '@/components/StubText';
 import cx from './Main.less';
 
@@ -33,7 +33,7 @@ export const Main: React.FC = () => {
       >
         <Menu mode="inline">
           <Menu.Item key="logo" style={{ height: 'initial' }}>
-            <Logo className="logo" />
+            <IT1Logo className="logo" />
           </Menu.Item>
           <Menu.Item key="adminPage">
             <Link to="/adminPage">Admin page</Link>

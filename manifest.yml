@@ -41,20 +41,19 @@ modules:
     - key: examplePlugin-milepost-1
       resource: main
       title: examplePluginViewButton
-      loadType: micro
+      loadType: Micro
       route: /viewAction
       viewType:
         - gantt
   chart:
     - key: examplePlugin-chart-1
       resource: main
-      route: /chart
       name: examplePluginChart
       description: example chart
-      loadType: RemoteJs
+      loadType: Micro
       tabOrder: 1
       grid:
-        w: 4
+        w: 5
         h: 3
         minW: 1
         maxW: 12

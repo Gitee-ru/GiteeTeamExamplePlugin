@@ -1,9 +1,8 @@
 import React, { ReactElement, useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import PageHeader from '@osui/page-header';
-import { Logo } from '@/components/Logo';
+import { StubContent } from '../StubContent';
 import cx from './PageStub.less';
-import { StubText } from '../StubText';
 
 export interface PageStubProps {
   title: string;
@@ -16,10 +15,7 @@ export function PageStub(props: PageStubProps): ReactElement {
   return (
     <div>
       <PageHeader title={props.title} onBack={isDev ? back : undefined} />
-      <div className={cx('Stub')}>
-        <Logo />
-        <StubText />
-      </div>
+      <StubContent className={cx('StubPage__content')} />
     </div>
   );
 }
