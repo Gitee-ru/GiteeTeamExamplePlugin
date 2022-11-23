@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Layout } from 'antd';
 import Menu from '@osui/menu';
-import Input from '@osui/input';
-import Rate from '@osui/rate';
+import Space from '@osui/space';
 import { useSDK } from '@projectproxima/plugin-sdk';
-import Error from '@/statics/error.png';
 import { Logo } from '@/components/Logo';
+import { StubText } from '@/components/StubText';
 import cx from './Main.less';
 
 const { Header, Content, Sider } = Layout;
@@ -62,15 +61,11 @@ export const Main: React.FC = () => {
       <Layout className="site-layout" style={{ marginLeft: 200 }}>
         <Header className="site-layout-background" style={{ padding: 0 }} />
         <Content style={{ padding: '24px 16px 0', overflow: 'initial' }}>
-          <div>
+          <Space direction="vertical">
             <h2 className={cx('title')}>Demo</h2>
-            <Input placeholder="OSUI input" />
-            <Rate allowHalf defaultValue={2.5} />
+            <StubText />
             <button onClick={handleClick}>Open issue panel</button>
-            <div>
-              <img src={Error} />
-            </div>
-          </div>
+          </Space>
         </Content>
       </Layout>
     </Layout>
