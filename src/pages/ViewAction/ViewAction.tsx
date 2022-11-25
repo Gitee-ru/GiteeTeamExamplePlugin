@@ -8,7 +8,12 @@ import cx from './ViewAction.less';
 
 export function ViewAction(): ReactElement {
   const handleClick = useCallback(() => {
-    message.info({ content: <Stub />, duration: 0 });
+    message.info({
+      content: <Stub />,
+      duration: 0,
+      prefixCls: 'ViewAction__prefix',
+      rootPrefixCls: 'ViewAction__root-prefix',
+    });
   }, [message]);
 
   return (
