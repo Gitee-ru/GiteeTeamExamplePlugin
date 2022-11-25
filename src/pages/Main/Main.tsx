@@ -1,6 +1,5 @@
-import React, { useCallback } from 'react';
+import React, { Fragment, useCallback } from 'react';
 import { useSDK } from '@projectproxima/plugin-sdk';
-import { AppLayout } from '@/components/AppLayout';
 import { Stub } from '@/components/Stub';
 
 export const Main: React.FC = () => {
@@ -13,9 +12,9 @@ export const Main: React.FC = () => {
   }, [sdk]);
 
   return (
-    <AppLayout>
+    <Fragment>
       <Stub />
       <button onClick={handleClick}>Open issue panel</button>
-    </AppLayout>
+    </Fragment>
   );
 };
