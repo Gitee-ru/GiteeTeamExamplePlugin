@@ -1,6 +1,11 @@
 import React, { ReactElement } from 'react';
-import { PageStub } from '@/components/PageStub';
+import { AppLayout } from '@/components/AppLayout';
+import { Stub } from '@/components/Stub';
 
 export function ItemPanel(): ReactElement {
-  return <PageStub title="Item panel" />;
+  return (
+    <AppLayout>
+      <Stub />
+    </AppLayout>
+  );
 }

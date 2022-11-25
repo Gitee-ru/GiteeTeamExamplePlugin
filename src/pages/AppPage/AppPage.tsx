@@ -1,6 +1,11 @@
 import React, { ReactElement } from 'react';
-import { PageStub } from '@/components/PageStub';
+import { AppLayout } from '@/components/AppLayout';
+import { Stub } from '@/components/Stub';
 
 export function AppPage(): ReactElement {
-  return <PageStub title="App page" />;
+  return (
+    <AppLayout>
+      <Stub />
+    </AppLayout>
+  );
 }

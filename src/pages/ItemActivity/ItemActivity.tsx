@@ -1,6 +1,11 @@
 import React, { ReactElement } from 'react';
-import { PageStub } from '@/components/PageStub';
+import { AppLayout } from '@/components/AppLayout';
+import { Stub } from '@/components/Stub';
 
 export function ItemActivity(): ReactElement {
-  return <PageStub title="Item activity" />;
+  return (
+    <AppLayout>
+      <Stub />
+    </AppLayout>
+  );
 }

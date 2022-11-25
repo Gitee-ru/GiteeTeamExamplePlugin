@@ -1,14 +1,14 @@
 import React from 'react';
 import { IT1Logo } from '@/components/IT1Logo';
-import cx from './StubContent.less';
+import cx from './Stub.less';
 
-export interface StubContentProps {
+export interface StubProps {
   className?: string;
 }
 
-export function StubContent(props: StubContentProps): React.ReactElement {
+export function Stub(props: StubProps): React.ReactElement {
   return (
-    <div className={[cx('StubContent', props.className)].filter(Boolean).join(' ')}>
+    <div className={[cx('Stub', props.className)].filter(Boolean).join(' ')}>
       <IT1Logo />
       <div>
         This is example panel to show ability to extend UI by additional plugins. If this

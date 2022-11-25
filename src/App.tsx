@@ -2,6 +2,7 @@ import React, { useEffect, Suspense, useMemo } from 'react';
 import { MemoryRouter, Switch, Route, useHistory } from 'react-router-dom';
 import { ConfigProvider, message } from '@osui/ui';
 import { PluginSDKContext } from '@projectproxima/plugin-sdk';
+import { NavLinksProvider } from '@/components/NavLinksProvider';
 
 const rootElement = 'ExamplePlugin';
 
@@ -11,6 +12,8 @@ message.config({
 });
 
 import routes from './routes';
+
+const navLinks = routes.map(({ path, label }) => ({ path, label }));
 
 interface QiankunContextProps {
   setGlobalState?: (data: { data: any }) => void;
@@ -45,16 +48,18 @@ const App: React.FC = props => {
   return (
     <PluginSDKContext.Provider value={qiankunContextValue.sdk}>
       <ConfigProvider getPopupContainer={() => document.getElementById(rootElement)}>
-        <MemoryRouter>
-          <GoPropsRoute {...props} />
-          <Switch>
-            <Suspense fallback={<div>Loading...</div>}>
-              {routes.map(({ path, component, exact }) => (
-                <Route path={path} component={component} exact={exact} key={path} />
-              ))}
-            </Suspense>
-          </Switch>
-        </MemoryRouter>
+        <NavLinksProvider links={navLinks}>
+          <MemoryRouter>
+            <GoPropsRoute {...props} />
+            <Switch>
+              <Suspense fallback={<div>Loading...</div>}>
+                {routes.map(({ path, component, exact }) => (
+                  <Route path={path} component={component} exact={exact} key={path} />
+                ))}
+              </Suspense>
+            </Switch>
+          </MemoryRouter>
+        </NavLinksProvider>
       </ConfigProvider>
     </PluginSDKContext.Provider>
   );

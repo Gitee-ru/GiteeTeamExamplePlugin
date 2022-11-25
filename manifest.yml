@@ -46,10 +46,10 @@ modules:
       viewType:
         - gantt
   chart:
-    - key: examplePlugin-chart-1
+    - key: examplePlugin-widget-1
       resource: main
-      name: examplePluginChart
-      description: example chart
+      name: examplePluginWidget
+      description: Example widget
       loadType: Micro
       tabOrder: 1
       grid:

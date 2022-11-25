@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { AppLayout } from '@/components/AppLayout';
 import { Stub } from '@/components/Stub';
 
-export function AdminPage(): ReactElement {
+export function Widget(): ReactElement {
   return (
     <AppLayout>
       <Stub />
