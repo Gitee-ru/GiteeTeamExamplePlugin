@@ -1,21 +1,22 @@
-import React, { ReactElement, ReactNode } from 'react';
+import React, { ReactElement, ReactNode, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout } from 'antd';
 import Menu from '@osui/menu';
+import { NavLinksContext } from './NavLinksProvider';
 
 const { Header, Content, Sider } = Layout;
 
 interface AppLayoutProps {
-  nav?: { path: string; label: string }[];
   children?: ReactNode;
 }
 
 export function AppLayout(props: AppLayoutProps): ReactElement {
-  const { nav, children } = props;
   const isDev = process.env.NODE_ENV === 'development';
 
+  const navLinks = useContext(NavLinksContext);
+
   if (!isDev) {
-    return <div>{children}</div>;
+    return <div>{props.children}</div>;
   }
 
   return (
@@ -31,7 +32,7 @@ export function AppLayout(props: AppLayoutProps): ReactElement {
         }}
       >
         <Menu mode="inline">
-          {nav.map(link => (
+          {navLinks.map(link => (
             <Menu.Item key={link.path}>
               <Link to={link.path}>{link.label}</Link>
             </Menu.Item>
@@ -40,7 +41,7 @@ export function AppLayout(props: AppLayoutProps): ReactElement {
       </Sider>
       <Layout className="site-layout" style={{ marginLeft: 200 }}>
         <Header className="site-layout-background" style={{ padding: 0 }} />
-        <Content style={{ overflow: 'initial' }}>{children}</Content>
+        <Content style={{ overflow: 'initial' }}>{props.children}</Content>
       </Layout>
     </Layout>
   );

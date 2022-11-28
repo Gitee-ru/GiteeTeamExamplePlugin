@@ -1,6 +1,11 @@
 import React, { ReactElement } from 'react';
+import { AppLayout } from '@/components/AppLayout';
 import { Stub } from '@/components/Stub';
 
 export function WorkspacePage(): ReactElement {
-  return <Stub />;
+  return (
+    <AppLayout>
+      <Stub />
+    </AppLayout>
+  );
 }

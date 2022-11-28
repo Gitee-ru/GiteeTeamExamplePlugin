@@ -1,14 +1,6 @@
-import React, { ComponentType } from 'react';
-import { AppLayout } from '@/components/AppLayout';
+import React from 'react';
 
-interface RouteDesc {
-  path: string;
-  label: string;
-  component: ComponentType;
-  exact?: boolean;
-}
-
-const routes: RouteDesc[] = [
+const routes = [
   {
     path: '/',
     label: 'Main page',
@@ -51,16 +43,12 @@ const routes: RouteDesc[] = [
     component: React.lazy(() => import('../pages/ViewAction')),
     exact: true,
   },
+  {
+    path: '/widget',
+    label: 'Widget',
+    component: React.lazy(() => import('../pages/Widget')),
+    exact: true,
+  },
 ];
-
-const navLinks = routes.map(({ path, label }) => ({ path, label }));
-
-routes.forEach(route => {
-  route.component = () => (
-    <AppLayout nav={navLinks}>
-      <route.component />
-    </AppLayout>
-  );
-});
 
 export default routes;
