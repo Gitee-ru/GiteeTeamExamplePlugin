@@ -43,12 +43,6 @@ const routes = [
     component: React.lazy(() => import('../pages/ViewAction')),
     exact: true,
   },
-  {
-    path: '/widget',
-    label: 'Widget',
-    component: React.lazy(() => import('../pages/Widget')),
-    exact: true,
-  },
 ];
 
 export default routes;
