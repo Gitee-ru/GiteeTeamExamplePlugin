@@ -2,20 +2,14 @@
 
 Testing plugins system and manifest
 
-
-
-For local start project
+### Dev
 
 `yarn dev`
 
+### Build
 
-
-For local build project
 `yarn build`
 
+### Build app
 
-
-
-Build zip file for add plugin to Gitee
 `yarn build-app`
-

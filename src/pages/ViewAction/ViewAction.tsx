@@ -1,19 +1,13 @@
 import React, { ReactElement, useCallback } from 'react';
-import Button from '@osui/button';
-import message from '@osui/message';
+import { Button, message } from 'antd';
 import { AppLayout } from '@/components/AppLayout';
 import { IT1Icon } from '@/components/IT1Icon';
-import { Stub } from '@/components/Stub';
+import { stubText } from '@/components/Stub';
 import cx from './ViewAction.less';
 
 export function ViewAction(): ReactElement {
   const handleClick = useCallback(() => {
-    message.info({
-      content: <Stub />,
-      duration: 0,
-      prefixCls: 'ViewAction__prefix',
-      rootPrefixCls: 'ViewAction__root-prefix',
-    });
+    alert(stubText);
   }, [message]);
 
   return (

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useSDK } from '@projectproxima/plugin-sdk';
+import { useSDK } from '@giteeteam/plugin-sdk';
 import { AppLayout } from '@/components/AppLayout';
 import { Stub } from '@/components/Stub';
 

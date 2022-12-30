@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactNode, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Layout } from 'antd';
-import Menu from '@osui/menu';
+import { Layout, Menu } from 'antd';
+// import Menu from '@osui/menu';
 import { NavLinksContext } from './NavLinksProvider';
 
 const { Header, Content, Sider } = Layout;
