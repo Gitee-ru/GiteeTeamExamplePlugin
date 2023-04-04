@@ -16,5 +16,5 @@ Testing plugins system and manifest
 
 ### Admin guide
 
-https://docs.gitee.ru/docs/admin-guide/plugins/plagin-market/
+[Click here](https://docs.gitee.ru/docs/admin-guide/plugins/plagin-market/)
 
